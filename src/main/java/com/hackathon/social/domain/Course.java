@@ -1,13 +1,15 @@
 package com.hackathon.social.domain;
 
- enum CourseCategoty
- {
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+enum CourseCategory {
     AI(1),
     Computer(2);
 
     private final int value;
 
-	 CourseCategoty(int val) {
+    CourseCategory(int val) {
         this.value = val;
     }
 
@@ -15,51 +17,14 @@ package com.hackathon.social.domain;
         return value;
     }
 }
- 
+
+@Data
+@NoArgsConstructor
 public class Course {
-	private int courseId;
-	private String courseName;
-	private String courseCategoty;
-	private String courseDescription;
 
-	public int getCourseId() {
-		return courseId;
-	}
-
-	public void setCourseId(int courseId) {
-		this.courseId = courseId;
-	}
-
-	public String getCourseName() {
-		return courseName;
-	}
-
-	public void setCourseName(String courseName) {
-		this.courseName = courseName;
-	}
-
-	public String getCourseCategoty() {
-		return courseCategoty;
-	}
-
-	public void setCourseCategoty(String courseCategoty) {
-		this.courseCategoty = courseCategoty;
-	}
-
-	public String getCourseDescription() {
-		return courseDescription;
-	}
-
-	public void setCourseDescription(String courseDescription) {
-		this.courseDescription = courseDescription;
-	}
-
-	@Override
-	public String toString() {
-		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", courseCategoty=" + courseCategoty
-				+ ", courseDescription=" + courseDescription + "]";
-	}
-	
-	
+    private int courseId;
+    private String courseName;
+    private String courseCategory;
+    private String courseDescription;
 
 }

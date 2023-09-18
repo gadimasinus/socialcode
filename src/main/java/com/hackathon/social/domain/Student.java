@@ -1,5 +1,10 @@
 package com.hackathon.social.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class Student extends Person {
 	private int numCourses;
 	private String[] courses;
@@ -10,14 +15,5 @@ public class Student extends Person {
 		numCourses = 0;
 		courses = new String[10];
 		grades = new int[10];
-	}
-
-	 public void addCourseGrade(String course, int grade) {
-		
-	 }
-	 
-	@Override
-	public String toString() {
-		return "Student: " + super.toString();
 	}
 }
