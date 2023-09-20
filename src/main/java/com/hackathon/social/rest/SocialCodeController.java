@@ -11,7 +11,7 @@ import com.hackathon.social.domain.Student;
 public class SocialCodeController {
 	 @RequestMapping(method = RequestMethod.GET,  path =  "/version", produces = "application/json")
 	 public String getBook() {
-	        return "Social code app api version 1.0";
+	        return "SocialCode Service API version 1.0";
 	 }
 	 
 	 public Teacher addTeacher() {
